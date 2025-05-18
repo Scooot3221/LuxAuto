@@ -1,96 +1,162 @@
 
+> 🥷🏻:
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuxAuto — Продажа люксовых автомобилей</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #000000;
-            color: #ffffff;
-        }
-        header {
-            background-color: #000000;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #d4af37;
-        }
-        header h1 {
-            color: #d4af37;
-            margin: 0;
-        }
-        nav a {
-            color: #ffffff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .hero {
-            height: 100vh;
-            background: url('https://images.unsplash.com/photo-1617531653332-60f40d89bbf3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #ffffff;
-        }
-        .hero h2 {
-            font-size: 3em;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border: 2px solid #d4af37;
-        }
-        .cta {
-            background-color: #111111;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .cta h3 {
-            color: #d4af37;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .cta p {
-            max-width: 600px;
-            margin: auto;
-            line-height: 1.6;
-        }
-        footer {
-            background-color: #000000;
-            padding: 20px;
-            text-align: center;
-            border-top: 1px solid #d4af37;
-            color: #aaaaaa;
-            font-size: 0.9em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LuxAuto — Продажа люксовых автомобилей</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+    }
+    header {
+      background-color: #000000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #d4af37;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      color: #d4af37;
+      margin: 0;
+      font-size: 1.8em;
+    }
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1617531653332-60f40d89bbf3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+    }
+    .hero h2 {
+      font-size: 3em;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border: 2px solid #d4af37;
+    }
+    .cta {
+      background-color: #111111;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .cta h3 {
+      color: #d4af37;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .cta p {
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    form {
+      margin-top: 40px;
+    }
+    input, textarea {
+      width: 80%;
+      max-width: 500px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #d4af37;
+      background: #000;
+      color: #fff;
+      font-size: 1em;
+    }
+    button {
+      padding: 10px 30px;
+      background-color: #d4af37;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #000000;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #d4af37;
+      color: #aaaaaa;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero h2 {
+        font-size: 2em;
+      }
+    }
+  </style>
+
+  <!-- Яндекс.Метрика -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(12345678, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/12345678" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
 </head>
 <body>
-    <header>
-        <h1>LuxAuto</h1>
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="catalog.html">Каталог</a>
-            <a href="about.html">О компании</a>
-            <a href="contacts.html">Контакты</a>
-        </nav>
-    </header>
-    <section class="hero">
-        <h2>Исключительность на колёсах</h2>
-    </section>
-    <section class="cta">
-        <h3>Премиальные автомобили в Москве</h3>
-        <p>LuxAuto предлагает вам лучшие модели от Mercedes-Benz, Bentley, Porsche и других ведущих брендов. 
-        Персональный подход, гарантия качества и шоурум в центре Москвы по адресу Кутузовский проспект, 36, стр. 3.</p>
-    </section>
-    <footer>
-        &copy; 2025 LuxAuto. Все права защищены. | Москва, Кутузовский проспект, 36, стр. 3
-    </footer>
+  <header>
+    <h1>LuxAuto</h1>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">О компании</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Исключительность на колёсах</h2>
+  </section>
+
+  <section class="cta">
+    <h3>Оставьте заявку на консультацию</h3>
+    <p>Заполните форму — и наш менеджер свяжется с вами для подбора автомобиля вашей мечты.</p>
+
+    <form action="https://formspree.io/f/moqgnpwa" method="POST">
+      <input type="text" name="name" placeholder="Ваше имя" required><br>
+      <input type="email" name="email" placeholder="Email" required><br>
+      <textarea name="message" rows="4" placeholder="Комментарий..."></textarea><br>
+      <button type="submit">Отправить</button>
+    </form>
+</section>
+
+  <footer>
+    &copy; 2025 LuxAuto. Все права защищены. | Москва, Кутузовский проспект, 36, стр. 3
+  </footer>
 </body>
 </html>
