@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Новости — LuxAuto</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #d4af37;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      color: #d4af37;
+      margin: 0;
+      font-size: 1.8em;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #d4af37;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    article {
+      background-color: #111;
+      border: 1px solid #d4af37;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    article h3 {
+      margin-top: 0;
+      color: #d4af37;
+    }
+    article p {
+      color: #ccc;
+    }
+    time {
+      font-size: 0.9em;
+      color: #999;
+      display: block;
+      margin-bottom: 15px;
+    }
+    footer {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #d4af37;
+      color: #aaa;
+      font-size: 0.9em;
+      margin-top: 50px;
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LuxAuto</h1>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">О компании</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="news.html">Новости</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="services.html">Услуги</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Новости LuxAuto</h2>
+
+    <article>
+      <time datetime="2025-05-01">1 мая 2025</time>
+      <h3>Новый Mercedes-Benz S-Class уже в наличии</h3>
+      <p>Мы рады представить обновленную модель Mercedes-Benz S-Class 2025 года с улучшенным дизайном и инновационными технологиями.</p>
+    </article>
+
+    <article>
+      <time datetime="2025-04-15">15 апреля 2025</time>
+      <h3>Расширение ассортимента Lexus</h3>
+      <p>В нашем салоне теперь доступны новые версии Lexus LX и RX с эксклюзивными опциями и дополнительным комфортом.</p>
+    </article>
+
+    <article>
+      <time datetime="2025-03-30">30 марта 2025</time>
+      <h3>Специальное предложение для постоянных клиентов</h3>
+      <p>С 1 апреля по 30 июня действует программа лояльности с уникальными скидками и сервисными бонусами.</p>
+    </article>
+  </main>
+
+  <footer>
+    &copy; 2025 LuxAuto. Все права защищены. | Москва, Кутузовский проспект, 36, стр. 3
+  </footer>
+</body>
+</html>
