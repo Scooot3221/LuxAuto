@@ -2,89 +2,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты | LuxAuto</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #000000;
-            color: #ffffff;
-        }
-        header {
-            background-color: #000000;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #d4af37;
-        }
-        header h1 {
-            color: #d4af37;
-            margin: 0;
-        }
-        nav a {
-            color: #ffffff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .content {
-            padding: 60px 40px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        .content h2 {
-            color: #d4af37;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .content p {
-            line-height: 1.6;
-        }
-        footer {
-            background-color: #000000;
-            padding: 20px;
-            text-align: center;
-            border-top: 1px solid #d4af37;
-            color: #aaaaaa;
-            font-size: 0.9em;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>LuxAuto</h1>
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="catalog.html">Каталог</a>
-            <a href="about.html">О компании</a>
-            <a href="contacts.html">Контакты</a>
-        </nav>
-    </header>
-    <section class="content">
-        <h2>Свяжитесь с нами</h2>
-        <p>Телефон: +7 (495) 123-45-67 | Email: info@luxauto.ru | Адрес: Кутузовский проспект, 36, стр. 3</p>
-    </section>
-    <footer>
-        &copy; 2025 LuxAuto. Все права защищены. | Москва, Кутузовский проспект, 36, стр. 3
-    </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ru">
-<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Контакты — LuxAuto</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       background-color: #000;
       color: #fff;
+      line-height: 1.6;
     }
     header {
       background-color: #000;
@@ -107,19 +34,78 @@
       font-weight: bold;
     }
     main {
-      padding: 40px 20px;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.6;
-      text-align: center;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
     h2 {
       color: #d4af37;
       font-size: 2.5em;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      text-align: center;
     }
-    form {
+    .contacts-info {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #d4af37;
+    }
+    .contacts-info p {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
       margin-top: 20px;
+      border-radius: 8px;
     }
-    input, textarea {
-      width: 80%;
+    footer {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #d4af37;
+      color: #aaa;
+      font-size: 0.9em;
+      margin-top: 50px;
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LuxAuto</h1>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">О компании</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="news.html">Новости</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="services.html">Услуги</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Контакты</h2>
+    <div class="contacts-info">
+      <p><strong>Адрес салона:</strong> Москва, Кутузовский проспект, 36, стр. 3</p>
+      <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+      <p><strong>Email:</strong> info@luxauto.ru</p>
+      <p><strong>Часы работы:</strong> Пн–Пт: 10:00–19:00, Сб–Вс: 11:00–17:00</p>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.459179739439!2d37.53218381592921!3d55.74210988055347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab9ccfa72196b%3A0xd28778f5810f65ef!2z0J7QvtC70LjRhtC10L3QuNC1INCf0LDRgNC-0YHQvy4gMzYsINCc0LjQvdC40LvRjywg0JrQuNGG0L3QtdC90L7Qu9GM0LrQuNC5LCDQk9C-0LvRjNC90LjQuSDQutC-0LPQviwgMTAwMDg3!5e0!3m2!1sru!2sru!4v1684542936548!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </main>
+
+  <footer>
+    &copy; 2025 LuxAuto. Все права защищены. | Москва, Кутузовский проспект, 36, стр. 3
+  </footer>
+</body>
+</html>
