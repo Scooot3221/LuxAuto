@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ — LuxAuto</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #d4af37;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      color: #d4af37;
+      margin: 0;
+      font-size: 1.8em;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #d4af37;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .faq-item {
+      background-color: #111;
+      border: 1px solid #d4af37;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .faq-item h3 {
+      margin: 0;
+      color: #d4af37;
+      font-size: 1.2em;
+    }
+    .faq-answer {
+      margin-top: 10px;
+      color: #ccc;
+      display: none;
+      font-size: 1.1em;
+      line-height: 1.4;
+    }
+    footer {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #d4af37;
+      color: #aaa;
+      font-size: 0.9em;
+      margin-top: 50px;
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LuxAuto</h1>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">О компании</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="news.html">Новости</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="services.html">Услуги</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Часто задаваемые вопросы</h2>
+
+    <div class="faq-item">
+      <h3>Какие марки автомобилей представлены в вашем салоне?</h3>
+      <div class="faq-answer">
+        В нашем салоне вы найдете автомобили премиум-класса таких брендов, как Mercedes-Benz, Lexus, BMW и Audi.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Можно ли оформить тест-драйв?</h3>
+      <div class="faq-answer">
+        Да, мы предлагаем индивидуальные тест-драйвы. Для записи свяжитесь с нашим менеджером по телефону или через форму на сайте.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Какие условия кредитования доступны?</h3>
+      <div class="faq-answer">
+        Мы предлагаем выгодные программы кредитования и лизинга с минимальными процентными ставками и гибкими условиями.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Есть ли возможность трейд-ин?</h3>
+      <div class="faq-answer">
+        Да, мы принимаем автомобили в трейд-ин с оценкой и выгодным обменом на новые модели.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 LuxAuto. Все права защищены. | Москва, Кутузовский проспект, 36, стр. 3
+  </footer>
+
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-answer');
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+        } else {
+          answer.style.display = 'block';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
