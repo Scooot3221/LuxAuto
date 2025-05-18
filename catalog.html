@@ -2,152 +2,97 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Каталог — LuxAuto</title>
+  <title>Каталог</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #000;
-      color: #fff;
+      padding: 40px;
     }
-    header {
-      background-color: #000;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #d4af37;
-      flex-wrap: wrap;
-    }
-    header h1 {
-      color: #d4af37;
-      margin: 0;
-      font-size: 1.8em;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    main {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    h2 {
-      color: #d4af37;
-      font-size: 2.5em;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-    .car-list {
-      display: flex;
-      flex-wrap: wrap;
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 30px;
-      justify-content: center;
     }
-    .car-card {
-      background: #111;
-      border: 1px solid #d4af37;
-      border-radius: 10px;
-      width: 280px;
-      padding: 15px;
-      box-sizing: border-box;
+    /* Ссылка без подчёркивания и с белым цветом */
+    .catalog-item-link {
+      text-decoration: none;
+      color: white;
+      display: block;
+      transition: transform 0.3s;
+    }
+    .catalog-item-link:hover {
+      transform: scale(1.05);
+    }
+    .catalog-item {
       text-align: center;
     }
-    .car-card img {
+    .catalog-item img {
       width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
+      border-radius: 10px;
+      display: block;
     }
-    .car-card h3 {
-      margin: 0 0 10px 0;
-      font-size: 1.4em;
-    }
-    .car-card p {
-      margin: 0 0 10px 0;
-      font-size: 1em;
-      color: #ccc;
-    }
-    footer {
-      background-color: #000;
-      padding: 20px;
-      text-align: center;
-      border-top: 1px solid #d4af37;
-      color: #aaa;
-      font-size: 0.9em;
-      margin-top: 50px;
-    }
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .car-list {
-        flex-direction: column;
-        align-items: center;
-      }
-      .car-card {
-        width: 90%;
-      }
+    .catalog-item h3 {
+      margin: 10px 0 0;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>LuxAuto</h1>
-    <nav>
-      <a href="index.html">Главная</a>
-      <a href="catalog.html">Каталог</a>
-      <a href="about.html">О компании</a>
-      <a href="contacts.html">Контакты</a>
-      <a href="news.html">Новости</a>
-      <a href="reviews.html">Отзывы</a>
-      <a href="services.html">Услуги</a>
-      <a href="faq.html">FAQ</a>
-    </nav>
-  </header>
+  <h1>Каталог автомобилей</h1>
+  <div class="catalog-grid">
 
-   <main>
-    <h2>Каталог люксовых автомобилей</h2>
-    <div class="car-list">
-      <div class="car-card">
+    <a href="auto1.html" class="catalog-item-link">
+      <div class="catalog-item">
         <img src="https://avatars.mds.yandex.net/get-verba/1672712/2a0000016efa83a8a6d645638683ff9a73e3/auto_main" alt="Mercedes-Benz S-Class" />
         <h3>Mercedes-Benz S-Class</h3>
-        <p>Элегантный и мощный седан представительского класса.</p>
-       </div>
-      <div class="car-card">
-        <img src="https://apiweb.rolf.ru/storage/thumbnails/large/models/102/1713/a549fee9250adf05ee6b95a54cae3b61.jpg" alt="Lexus LX 570" />
-        <h3>Lexus LX 570</h3>
-        <p>Премиальный внедорожник с комфортом и надежностью.</p>
       </div>
-      <div class="car-card">
-        <img src="https://s.auto.drom.ru/i24263/c/photos/fullsize/audi/a8/audi_a8_1038831.jpg" alt="Audi A8" />
-        <h3>Audi A8</h3>
-        <p>Современный технологичный седан бизнес-класса.</p>
-      </div>
-    <div class="car-card">
-        <img src="https://www.bmw.ru/content/dam/bmw/marketRU/bmw_ru/all-models/7-series/sedan/2020/bmw-7series-sedan-inform-line-01-slide-01.jpg.asset.1586154517333.jpg" alt="BMW 7 series" />
-        <h3>BMW 7 series</h3>
-        <p>BMW 7 серии привлекает внимание внушительным обликом, максимальной мощностью и эксклюзивным уровнем комфорта. Выразительность облика подчеркивается впечатляющим дизайном передней части с характерной решеткой радиатора. Боковые воздуховоды добавляют индивидуальности характеру автомобиля.</p>
-      </div>
-<div class="car-card">
-        <img src="https://rolls-royce-avilon.ru/media/blocks/image/Spectre_Unveiling_Spectre_Exterior_Image_Studio_Front_3-4_RO6hGcn.jpg" alt="Rolls Royce Spectre" />
-        <h3>Rolls Royce Spectre</h3>
-        <p>Rolls-Royce Spectre — первая серийная модель электроавтомобилей бренда. Это габаритный автомобиль купе с роскошным дизайном, обтекаемым силуэтом и достойными техническими характеристиками. Данный электрокар класса люкс разработан для водителей, которые предпочитают выделяться на дороге и привыкли к абсолютному уровню комфорта.</p>
-      </div>
-<div class="car-card">
-        <img src="https://avatars.mds.yandex.net/get-verba/787013/2a00000172320fa64841a4ebcfbf058e471c/cattouchret" alt="Jaguar F-Type" />
-        <h3>Jaguar F-Type</h3>
-        <p>Jaguar F-Type 2022 — это динамичный и элегантный спортивный автомобиль, сочетающий британский стиль и передовые технологии. Благодаря мощным двигателям с турбонаддувом, включая вариант V8, F-Type обеспечивает впечатляющее ускорение и захватывающий звук выхлопа. Современный дизайн с агрессивной аэродинамикой и плавными линиями подчёркивает спортивный характер модели</p>
-      </div>
+    </a>
 
-  </main>
+    <a href="auto2.html" class="catalog-item-link">
+      <div class="catalog-item">
+        <img src="images/auto2.jpg" alt="Авто 2" />
+        <h3>Авто 2</h3>
+      </div>
+    </a>
 
-  <footer>
-    &copy; 2025 LuxAuto. Все права защищены. | Москва, Кутузовский проспект, 36, стр. 3
-  </footer>
+    <a href="auto3.html" class="catalog-item-link">
+      <div class="catalog-item">
+        <img src="images/auto3.jpg" alt="Авто 3" />
+        <h3>Авто 3</h3>
+      </div>
+    </a>
+
+    <a href="auto4.html" class="catalog-item-link">
+      <div class="catalog-item">
+        <img src="images/auto4.jpg" alt="Авто 4" />
+        <h3>Авто 4</h3>
+      </div>
+    </a>
+
+    <a href="auto5.html" class="catalog-item-link">
+      <div class="catalog-item">
+        <img src="images/auto5.jpg" alt="Авто 5" />
+        <h3>Авто 5</h3>
+      </div>
+    </a>
+
+    <a href="auto6.html" class="catalog-item-link">
+      <div class="catalog-item">
+        <img src="images/auto6.jpg" alt="Авто 6" />
+        <h3>Авто 6</h3>
+      </div>
+    </a>
+
+    <a href="auto7.html" class="catalog-item-link">
+      <div class="catalog-item">
+        <img src="images/auto7.jpg" alt="Авто 7" />
+        <h3>Авто 7</h3>
+      </div>
+    </a>
+
+  </div>
 </body>
 </html>
