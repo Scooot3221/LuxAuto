@@ -137,3 +137,54 @@
   </footer>
 </body>
 </html>
+<main>
+  <h2>Наш каталог люксовых автомобилей</h2>
+  <div class="car-gallery">
+    <div class="car-item">
+      <img src="images/mercedes-s-class.jpg" alt="Mercedes-Benz S-Class" />
+      <h3>Mercedes-Benz S-Class</h3>
+      <p>Роскошный седан бизнес-класса с передовыми технологиями.</p>
+    </div>
+    <div class="car-item">
+      <img src="images/lexus-lx570.jpg" alt="Lexus LX 570" />
+      <h3>Lexus LX 570</h3>
+      <p>Надёжный и комфортный внедорожник премиум-класса.</p>
+    </div>
+    <div class="car-item">
+      <img src="images/bmw-7-series.jpg" alt="BMW 7 Series" />
+      <h3>BMW 7 Series</h3>
+      <p>Элегантный и динамичный седан с инновационными функциями.</p>
+    </div>
+  </div>
+</main>
+
+<style>
+  .car-gallery {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .car-item {
+    background-color: #111;
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 280px;
+    text-align: center;
+  }
+  .car-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  .car-item h3 {
+    color: #d4af37;
+    margin: 10px 0 5px;
+  }
+  .car-item p {
+    color: #ccc;
+    font-size: 0.95em;
+    margin: 0;
+  }
+</style>
