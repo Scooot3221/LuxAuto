@@ -1,3 +1,4 @@
+> 🥷🏻:
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -6,7 +7,7 @@
   <style>
     /* Фон страницы */
     body {
-      background-image: url('https://www.fonstola.ru/pic/201309/2560x1440/fonstola.ru_117824.jpg'); /* Путь к твоему фону */
+      background-image: url('images/background.jpg'); /* Путь к фону */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -19,8 +20,40 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 60px;
+    }
+
+    /* Шапка */
+    header {
+      background: black;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      font-weight: 700;
+      font-size: 24px;
+      color: gold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: gold;
     }
 
     /* Кнопка */
@@ -55,7 +88,7 @@
       padding: 30px 40px;
       border-radius: 15px;
       max-width: 400px;
-      margin: 0 auto;
+      margin: 0 auto 60px;
       box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
     }
 
@@ -101,12 +134,32 @@
       color: #222;
     }
 
+    /* Футер */
+    footer {
+      background: #f0f0f0;
+      padding: 15px 0;
+      font-size: 14px;
+      color: black; /* Черный цвет */
+      text-align: center;
+      user-select: none;
+    }
+
   </style>
 </head>
 <body>
 
+  <!-- Шапка -->
+  <header>
+    <a href="index.html" class="logo">LuxAuto</a>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+
   <!-- Кнопка -->
-  <a href="catalog.html" class="button">В каталог</a>
+  <a href="catalog.html" class="button">Исключительность на колесах</a>
 
   <!-- Форма заявки -->
   <form action="#" method="post" onsubmit="alert('Спасибо за заявку! Мы свяжемся с вами.'); return false;">
@@ -114,8 +167,11 @@
     <input type="text" name="name" placeholder="Ваше имя" required />
     <input type="tel" name="phone" placeholder="Телефон" required pattern="\+?\d{7,15}" title="Введите корректный номер" />
     <textarea name="message" rows="4" placeholder="Комментарий (по желанию)"></textarea>
-    <button type="submit" class="submit-btn">Отправить</button>
+<button type="submit" class="submit-btn">Отправить</button>
   </form>
+
+  <!-- Футер -->
+  <footer>Все права защищены &copy; LuxAuto, 2025</footer>
 
 </body>
 </html>
