@@ -66,30 +66,32 @@
 
     /* Галерея фото */
     .car-photos {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 30px;
-    }
+  display: flex;
+  flex-direction: column; /* чтобы элементы шли вертикально */
+  align-items: center;    /* центрируем картинки по горизонтали */
+  gap: 30px;              /* отступы между фото */
+  margin-top: 30px;
+}
 
-    .car-photos figure {
-      max-width: 30%;
-      margin: 0;
-      text-align: center;
-      color: #ffd700;
-    }
+.car-photos figure {
+  width: 50vw;            /* ширина каждой фотографии — половина окна */
+  max-width: 500px;       /* максимум 500px, чтобы не слишком растягивалось */
+  margin: 0;
+  text-align: center;
+  color: #ffd700;
+}
 
-    .car-photos img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
-    }
+.car-photos img {
+  width: 100%;            /* картинка занимает всю ширину figure */
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+}
 
-    .car-photos figcaption {
-      margin-top: 8px;
-      font-size: 14px;
-      font-style: italic;
-    }
+.car-photos figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  font-style: italic;
+}
 
     a.back {
       display: inline-block;
