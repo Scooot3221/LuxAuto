@@ -42,34 +42,34 @@
       margin-bottom: 30px;
       text-align: center;
     }
-    .car-list {
-      display: flex;
-      flex-wrap: wrap;
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 30px;
-      justify-content: center;
     }
-    .car-card {
-      background: #111;
-      border: 1px solid #d4af37;
-      border-radius: 10px;
-      width: 280px;
-      padding: 15px;
-      box-sizing: border-box;
+    /* Ссылка без подчёркивания и с белым цветом */
+    .catalog-item-link {
+      text-decoration: none;
+      color: white;
+      display: block;
+      transition: transform 0.3s;
+    }
+    .catalog-item-link:hover {
+      transform: scale(1.05);
+    }
+    .catalog-item {
       text-align: center;
     }
-    .car-card img {
+    .catalog-item img {
       width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
+      border-radius: 10px;
+      display: block;
     }
-    .car-card h3 {
-      margin: 0 0 10px 0;
-      font-size: 1.4em;
+    .catalog-item h3 {
+      margin: 10px 0 0;
+      font-size: 18px;
     }
-    .car-card p {
-      margin: 0 0 10px 0;
-      font-size: 1em;
-      color: #ccc;
+
     }
     footer {
       background-color: #000;
