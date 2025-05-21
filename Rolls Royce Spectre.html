@@ -41,31 +41,28 @@
       color: white;
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 40px;
-    }
-
-    .car-details {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .car-details img.main-photo {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+      padding: 0;
     }
 
     h1 {
       margin-top: 20px;
       font-size: 40px;
       color: gold;
+      text-align: center;
     }
 
     p {
       font-size: 18px;
       line-height: 1.6;
       margin-top: 15px;
+      text-align: center;
+    }
+
+    .car-details {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      padding: 40px 20px;
     }
 
     /* Галерея фото */
@@ -110,16 +107,51 @@
     a.back:hover {
       text-decoration: underline;
     }
+
+    /* Анимация авто */
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .car-image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .base-car, .headlights {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .headlights {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .headlights.on {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <div class="header-logo">
-  <a href="index.html" style="color: gold; font-weight: bold; font-size: 28px; text-decoration: none;">
-    LuxAuto
-  </a>
-</div>
+      <a href="index.html" style="color: gold; font-weight: bold; font-size: 28px; text-decoration: none;">
+        LuxAuto
+      </a>
+    </div>
     <nav class="header-nav">
       <a href="index.html">Главная</a>
       <a href="catalog.html" class="active">Каталог</a>
@@ -127,31 +159,49 @@
     </nav>
   </header>
 
+  <!-- Анимированное изображение -->
+  <section class="hero">
+    <div class="car-image">
+      <img src="https://chatgpt.com/backend-api/public_content/enc/eyJpZCI6Im1fNjgyZDIyZmU4OTNjODE5MWFlMDZhMmYyZTdkYmNiMGQ6ZmlsZV8wMDAwMDAwMDA0N2M2MjQzOWZkMDZjYzk2OTM0NmY4ZSIsInRzIjoiNDg1NDk3IiwicCI6InB5aSIsInNpZyI6IjE3ODZlYzU2NTE0NmRiMmRjNDAzZjkzMDJiOTU2OTA0NDUxYjlkZTk0NGNjNWI0OGM5MzA1ODNmODdiYjViMjAiLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsfQ==" alt="Автомобиль с выключенными фарами" class="base-car">
+      <img src="https://chatgpt.com/backend-api/public_content/enc/eyJpZCI6Im1fNjgyZDI1NTQyZTZjODE5MWFhMTgwMjEyOGZiM2IwYjA6ZmlsZV8wMDAwMDAwMGI2ZTA2MjBhYTMzNDA5NzI3MjE0NTQwMCIsInRzIjoiNDg1NDk3IiwicCI6InB5aSIsInNpZyI6ImVhNTMzOTViZTViZTVhMTcyYWM3M2YyZGYwMTI4MTExZWEyYmU0ZTBjZjE5M2ZkZTU3OTlmZDg5YTcxN2Q0MjAiLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsfQ==" alt="Фары включены" class="headlights" id="headlights">
+    </div>
+  </section>
+
+  <!-- Контент ниже -->
   <div class="car-details">
-  <h1>Rolls Royce Spectre</h1>
-  <p>
-</p>
+    <h1>Rolls Royce Spectre</h1>
+    <p>Первый электрический Rolls-Royce — воплощение инноваций, роскоши и элегантности.</p>
 
-  <div class="car-photos">
-    <figure>
-     <img src="" alt="Вид" />
-      <figcaption></figcaption>
-    </figure>
+    <div class="car-photos">
+      <figure>
+        <img src="" alt="Вид" />
+        <figcaption></figcaption>
+      </figure>
 
-    <figure>
-      <img src="" alt="Фото 2" />
-      <figcaption></figcaption>
-    </figure>
+      <figure>
+        <img src="" alt="Фото 2" />
+        <figcaption></figcaption>
+      </figure>
 
-    <figure>
-      <img src="" alt="Фото 3" />
-      <figcaption>
-
-.</figcaption>
-    </figure>
-  </div>
+      <figure>
+        <img src="" alt="Фото 3" />
+        <figcaption>.</figcaption>
+      </figure>
+    </div>
     <a href="catalog.html" class="back">← Назад в каталог</a>
   </div>
 
+  <script>
+    const headlights = document.getElementById('headlights');
+
+    window.addEventListener('scroll', () => {
+      const trigger = 150;
+      if (window.scrollY > trigger) {
+        headlights.classList.add('on');
+      } else {
+        headlights.classList.remove('on');
+      }
+    });
+  </script>
 </body>
 </html>
