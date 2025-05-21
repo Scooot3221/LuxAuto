@@ -144,6 +144,14 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    .full-video-section {
+      position: relative;
+      overflow: hidden;
+      background-color: black;
+      z-index: 1;
+    }
+
   </style>
 </head>
 <body>
@@ -161,7 +169,7 @@
 
   <section class="hero">
     <video autoplay muted loop playsinline>
-      <source src="https://www.dodgegarage.com/assets/videos/video-170-desktop.mp4" type="video/mp4">
+      <source src="https://cdn.dodgegarage.com/demon-170/Demon170-Final.mp4" type="video/mp4">
     </video>
   </section>
 
@@ -183,13 +191,21 @@
   <div class="fade-in">
     <h1>Dodge Challenger SRT Demon 170</h1>
     <p>Dodge Demon 170 — это абсолютный рекордсмен по ускорению, построенный для драг-рейсинга, но с возможностью легальной езды по дорогам. Уникальная силовая установка выдаёт 1025 л.с. и обеспечивает разгон до 100 км/ч менее чем за 1.7 секунды.</p>
-    <div class="fade-in" style="text-align: center; margin: 40px auto;">
-  <video controls style="width: 90%; max-width: 900px; border-radius: 10px; box-shadow: 0 0 16px rgba(255,215,0,0.5);">
-    <source src="https://www.dodgegarage.com/assets/videos/video-170-garage-desktop.mp4" type="video/mp4">
-  </video>
-</div>
-
   </div>
+
+  <!-- Видео с автозапуском при прокрутке -->
+  <section class="full-video-section fade-in" id="promo-video">
+    <video
+      id="autoplayVideo"
+      muted
+      playsinline
+      preload="auto"
+      style="width: 100vw; height: 100vh; object-fit: cover; display: block;"
+    >
+      <source src="https://www.dodgegarage.com/assets/videos/video-170-garage-desktop.mp4" type="video/mp4">
+
+    </video>
+  </section>
 
   <div class="car-photos fade-in">
     <figure>
@@ -217,6 +233,21 @@
         }
       });
     });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const video = entry.target.querySelector('video');
+        if (entry.isIntersecting && video) {
+          video.play();
+        } else if (video) {
+          video.pause();
+        }
+      });
+    }, {
+      threshold: 0.6,
+    });
+
+    observer.observe(document.getElementById('promo-video'));
   </script>
 
 </body>
