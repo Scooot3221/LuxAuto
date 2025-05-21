@@ -1,7 +1,162 @@
 <!DOCTYPE html>
-<div class="container page-cover__container page-cover__container--center">
-	<div style="opacity: 0.145299;"><div class="page-cover__top">
-		<div class="page-cover__top-left"><ul class="page-cover__links"><li></li></ul>
-			<div class="page-cover__nav" style="display:none;"><ul><li><a href="/models/spectre" aria-current="page" class="nuxt-link-exact-active nuxt-link-active">SPECTRE</a></li><li><a href="/models/phantom" class="">PHANTOM</a></li><li><a href="/models/phantom-extended" class="">PHANTOM EXTENDED</a></li><li><a href="/models/cullinan" class="">CULLINAN</a></li><li><a href="/models/ghost" class="">GHOST</a></li><li><a href="/models/ghost-extended" class="">GHOST EXTENDED</a></li><li><a href="/models/wraith" class="">WRAITH</a></li><li><a href="/models/dawn" class="">DAWN</a></li><li><a href="/models/black-badge" class="">BLACK BADGE</a></li><li><a href="/models/cullinan-black-badge" class="">BLACK BADGE CULLINAN</a></li><li><a href="/models/wraith-black-badge" class="">BLACK BADGE WRAITH</a></li><li><a href="/models/dawn-black-badge" class="">BLACK BADGE DAWN</a></li><li><a href="/models/rolls-royce-black-badge-ghost" class="">BLACK BADGE GHOST</a></li></ul></div></div>
-		<div class="page-cover__top-right"><!---->
-		</div></div></div><h1 class="page-title" style="opacity: 0.145299;">SPECTRE</h1></div>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rolls-Royce Spectre</title>
+  <style>
+    /* Сброс стилей и базовые настройки */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    /* Фиксированный заголовок */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 70px;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      border-bottom: 1px solid gold;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: gold;
+    }
+
+    /* Секция героя с фоновым изображением */
+    .hero {
+      margin-top: 70px;
+      height: 100vh;
+      background: url('https://rolls-royce-avilon.ru/images/spectre-hero.jpg') no-repeat center center/cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Затемнение фона для читаемости текста */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    /* Контент внутри секции героя */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .hero-content h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease-out forwards;
+    }
+
+    .hero-content p {
+      font-size: 20px;
+      line-height: 1.6;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    /* Анимации появления */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Секция с дополнительной информацией */
+    .content {
+      padding: 100px 20px;
+      background-color: #111;
+    }
+
+    .content h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .content p {
+      max-width: 600px;
+      line-height: 1.6;
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .hero-content h2 {
+        font-size: 36px;
+      }
+
+      .hero-content p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rolls-Royce Spectre</h1>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Первый электрический Rolls-Royce</h2>
+      <p>
+        Откройте для себя новый уровень роскоши и инноваций с моделью Spectre — первым полностью электрическим автомобилем от Rolls-Royce.
+      </p>
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>О модели</h2>
+    <p>
+      Rolls-Royce Spectre — это воплощение элегантности и передовых технологий. С запасом хода до 520 км и разгон до 100 км/ч за 4,5 секунды, этот электромобиль устанавливает новые стандарты в мире роскошных автомобилей.
+    </p>
+  </section>
+
+</body>
+</html>
