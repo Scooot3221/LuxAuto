@@ -32,9 +32,6 @@
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
-      color: #d4af37;
-    }
     main {
       max-width: 900px;
       margin: 40px auto;
@@ -52,11 +49,6 @@
       border-radius: 8px;
       padding: 20px;
       margin-bottom: 30px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    article:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
     }
     article h3 {
       margin-top: 0;
@@ -71,55 +63,6 @@
       display: block;
       margin-bottom: 15px;
     }
-    .car-highlight {
-      margin-top: 50px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-    .car-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #111;
-      border: 1px solid #d4af37;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .car-item img {
-      width: 100%;
-      height: auto;
-      transition: transform 0.5s ease;
-    }
-    .car-item:hover img {
-      transform: scale(1.03);
-    }
-    .car-item h4 {
-      margin: 15px 0 5px;
-      color: #ffd700;
-      font-size: 1.4em;
-    }
-    .car-item p {
-      color: #ccc;
-      padding: 0 15px 20px;
-      text-align: center;
-    }
-    .video-section {
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-      position: relative;
-      margin: 60px 0;
-    }
-    .video-section video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .autoplay-trigger {
-      visibility: hidden;
-      height: 1px;
-    }
     footer {
       background-color: #000;
       padding: 20px;
@@ -129,9 +72,10 @@
       font-size: 0.9em;
       margin-top: 50px;
     }
-    @media (min-width: 768px) {
-      .car-highlight {
-        grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
@@ -171,56 +115,10 @@
       <h3>Специальное предложение для постоянных клиентов</h3>
       <p>С 1 апреля по 30 июня действует программа лояльности с уникальными скидками и сервисными бонусами.</p>
     </article>
-
-    <div class="video-section">
-      <video id="newsVideo" muted playsinline preload="auto">
-        <source src="https://www.dodgegarage.com/assets/videos/video-170-garage-desktop.mp4" type="video/mp4">
-        Ваш браузер не поддерживает воспроизведение видео.
-      </video>
-    </div>
-
-    <section class="car-highlight">
-      <div class="car-item">
-        <img src="https://cdn.bmwblog.com/wp-content/uploads/2022/05/2023-bmw-7-series-g70-01.jpg" alt="BMW 7 Series">
-        <h4>BMW 7 Series</h4>
-        <p>Роскошный бизнес-седан нового поколения — сочетание комфорта, технологий и динамики в одном кузове.</p>
-      </div>
-      <div class="car-item">
-        <img src="https://www.rolls-roycemotorcars.com/content/dam/rrmc/marketUK/rollsroycecars/news/2022/spectre-rolls-royce/Spectre_exterior_02.jpg" alt="Rolls Royce Spectre">
-        <h4>Rolls Royce Spectre</h4>
-        <p>Первый в истории электрический Rolls-Royce — вершина тишины, изящества и современного дизайна.</p>
-      </div>
-      <div class="car-item">
-        <img src="https://cdn.motor1.com/images/mgl/g0Moo/s3/jaguar-f-type-r-dynamic-p450.jpg" alt="Jaguar F-Type">
-        <h4>Jaguar F-Type</h4>
-        <p>Классический британский спорткар с характерным звучанием и захватывающей управляемостью.</p>
-      </div>
-      <div class="car-item">
-        <img src="https://www.allpar.com/images/demon/demon-170-burnout.jpg" alt="Dodge Challenger Demon SRT">
-        <h4>Dodge Challenger Demon SRT</h4>
-        <p>Самый мощный и агрессивный мускул-кар из когда-либо созданных — 1025 л.с. чистого безумия.</p>
-      </div>
-    </section>
   </main>
 
   <footer>
     &copy; 2025 LuxAuto. Все права защищены. | Москва, Кутузовский проспект, 36, стр. 3
   </footer>
-
-  <script>
-    const video = document.getElementById("newsVideo");
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          video.play();
-        } else {
-          video.pause();
-        }
-      });
-    }, { threshold: 0.5 });
-
-    observer.observe(video);
-  </script>
 </body>
 </html>
