@@ -110,38 +110,44 @@
 
     /* Анимация авто */
     .hero {
-      position: relative;
-      height: 100vh;
-      width: 100%;
-      overflow: hidden;
-    }
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
 
-    .car-image {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
+.car-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
-    .base-car, .headlights {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+.base-car, .headlights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1.8s ease-in-out;
+  pointer-events: none;
+}
 
-    .headlights {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      transition: opacity 2s ease-in-out;
-      mix-blend-mode: screen;
-      pointer-events: none;
-    }
+.base-car {
+  z-index: 1;
+  opacity: 1;
+}
 
-    .headlights.on {
-      opacity: 1;
-    }
+.headlights {
+  z-index: 2;
+  opacity: 0;
+  mix-blend-mode: screen;
+}
+
+.headlights.on {
+  opacity: 1;
+}
+
   </style>
 </head>
 <body>
@@ -162,9 +168,9 @@
   <!-- Анимированное изображение -->
   <section class="hero">
     <div class="car-image">
-      <img src="https://i.ibb.co/PnJrc15/a2fd4b7e-b108-43cf-ad7d-b429a96902f5.png" alt="Автомобиль с выключенными фарами" class="base-car">
-      <img src="https://i.ibb.co/B57BMRqz/7da6caf7-b110-403f-a934-5ab9eef5dd3e.png" alt="Фары включены" class="headlights" id="headlights">
-    </div>
+  <img src="https://i.ibb.co/G3Ctcqxz/Chat-GPT-Image-22-2025-00-26-35.png" alt="Автомобиль с выключенными фарами" class="base-car">
+  <img src="https://i.ibb.co/Xr4hzXtn/Chat-GPT-Image-22-2025-00-26-37.png" alt="Фары включены" class="headlights" id="headlights">
+</div>
   </section>
 
   <!-- Контент ниже -->
@@ -194,14 +200,15 @@
   <script>
     const headlights = document.getElementById('headlights');
 
-    window.addEventListener('scroll', () => {
-      const trigger = 150;
-      if (window.scrollY > trigger) {
-        headlights.classList.add('on');
-      } else {
-        headlights.classList.remove('on');
-      }
-    });
+window.addEventListener('scroll', () => {
+  const trigger = 150;
+  if (window.scrollY > trigger) {
+    headlights.classList.add('on');
+  } else {
+    headlights.classList.remove('on');
+  }
+});
+
   </script>
 </body>
 </html>
