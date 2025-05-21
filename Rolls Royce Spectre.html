@@ -2,161 +2,156 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rolls-Royce Spectre</title>
+  <title>Rolls Royce Spectre</title>
   <style>
-    /* Сброс стилей и базовые настройки */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
-
-    /* Фиксированный заголовок */
+    /* Стили для шапки */
     header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 70px;
-      background: rgba(0, 0, 0, 0.8);
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
+      background-color: #000;
+      padding: 20px 50px;
+      box-shadow: 0 2px 8px rgba(255, 215, 0, 0.7);
+      position: sticky;
+      top: 0;
       z-index: 1000;
-      border-bottom: 1px solid gold;
     }
 
-    header h1 {
-      font-size: 24px;
+    .header-logo img {
+      height: 50px;
+    }
+
+    .header-nav a {
+      color: #fff;
+      margin-left: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .header-nav a:hover,
+    .header-nav a.active {
+      color: #ffd700;
+    }
+
+    /* Общие стили страницы */
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .car-details {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .car-details img.main-photo {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 40px;
       color: gold;
     }
 
-    /* Секция героя с фоновым изображением */
-    .hero {
-      margin-top: 70px;
-      height: 100vh;
-      background: url('https://rolls-royce-avilon.ru/images/spectre-hero.jpg') no-repeat center center/cover;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Затемнение фона для читаемости текста */
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-
-    /* Контент внутри секции героя */
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      max-width: 800px;
-      padding: 20px;
-    }
-
-    .hero-content h2 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      animation: fadeInDown 1s ease-out forwards;
-    }
-
-    .hero-content p {
-      font-size: 20px;
+    p {
+      font-size: 18px;
       line-height: 1.6;
-      animation: fadeInUp 1s ease-out forwards;
+      margin-top: 15px;
     }
 
-    /* Анимации появления */
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    /* Галерея фото */
+    .car-photos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-top: 30px;
     }
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Секция с дополнительной информацией */
-    .content {
-      padding: 100px 20px;
-      background-color: #111;
-    }
-
-    .content h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
+    .car-photos figure {
+      width: 70vw;
+      max-width: 700px;
+      margin: 0;
+      text-align: center;
       color: white;
     }
 
-    .content p {
-      max-width: 600px;
-      line-height: 1.6;
-      font-size: 18px;
-      color: #ccc;
+    .car-photos img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 16px rgba(255, 215, 0, 0.9);
     }
 
-    /* Адаптивность */
-    @media (max-width: 768px) {
-      .hero-content h2 {
-        font-size: 36px;
-      }
+    .car-photos figcaption {
+      margin-top: 8px;
+      font-size: 14px;
+      font-style: italic;
+      color: white;
+    }
 
-      .hero-content p {
-        font-size: 16px;
-      }
+    a.back {
+      display: inline-block;
+      margin-top: 40px;
+      color: gold;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    a.back:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Rolls-Royce Spectre</h1>
+    <div class="header-logo">
+  <a href="index.html" style="color: gold; font-weight: bold; font-size: 28px; text-decoration: none;">
+    LuxAuto
+  </a>
+</div>
+    <nav class="header-nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html" class="active">Каталог</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Первый электрический Rolls-Royce</h2>
-      <p>
-        Откройте для себя новый уровень роскоши и инноваций с моделью Spectre — первым полностью электрическим автомобилем от Rolls-Royce.
-      </p>
-    </div>
-  </section>
+  <div class="car-details">
+  <h1>Rolls Royce Spectre</h1>
+  <p>
+</p>
 
-  <section class="content">
-    <h2>О модели</h2>
-    <p>
-      Rolls-Royce Spectre — это воплощение элегантности и передовых технологий. С запасом хода до 520 км и разгон до 100 км/ч за 4,5 секунды, этот электромобиль устанавливает новые стандарты в мире роскошных автомобилей.
-    </p>
-  </section>
+  <div class="car-photos">
+    <figure>
+     <img src="" alt="Вид" />
+      <figcaption></figcaption>
+    </figure>
+
+    <figure>
+      <img src="" alt="Фото 2" />
+      <figcaption></figcaption>
+    </figure>
+
+    <figure>
+      <img src="" alt="Фото 3" />
+      <figcaption>
+
+.</figcaption>
+    </figure>
+  </div>
+    <a href="catalog.html" class="back">← Назад в каталог</a>
+  </div>
 
 </body>
 </html>
