@@ -2,234 +2,111 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Jaguar F-Type</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaguar F-Type 2024 – Обзор 360°</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spritespin@4.0.11/release/spritespin.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/spritespin@4.0.11/release/spritespin.min.js"></script>
   <style>
-    /* Стили для шапки */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #000;
-      padding: 20px 50px;
-      box-shadow: 0 2px 8px rgba(255, 215, 0, 0.7);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .header-logo img {
-      height: 50px;
-    }
-
-    .header-nav a {
-      color: #fff;
-      margin-left: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
-
-    .header-nav a:hover,
-    .header-nav a.active {
-      color: #ffd700;
-    }
-
     body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
       background-color: #000;
-      color: white;
-      font-family: Arial, sans-serif;
+      border-bottom: 1px solid #333;
+    }
+    header h1 {
       margin: 0;
-      padding: 0;
+      font-size: 2em;
+      color: #fff;
     }
-
-    h1 {
-      margin-top: 20px;
-      font-size: 40px;
-      color: gold;
-      text-align: center;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-top: 15px;
-      text-align: center;
-    }
-
-    .car-details {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
+    section.hero {
       padding: 40px 20px;
-    }
-
-    .car-photos {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      margin-top: 30px;
-    }
-
-    .car-photos figure {
-      width: 70vw;
-      max-width: 700px;
-      margin: 0;
       text-align: center;
-      color: white;
     }
-
-    .car-photos img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 16px rgba(255, 215, 0, 0.9);
-    }
-
-    .car-photos figcaption {
-      margin-top: 8px;
-      font-size: 14px;
-      font-style: italic;
-      color: white;
-    }
-
-    a.back {
-      display: inline-block;
-      margin-top: 40px;
-      color: gold;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    a.back:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      position: relative;
+    footer {
       text-align: center;
-      padding: 40px 0;
-    }
-
-    .hero img {
-      width: 90%;
-      max-width: 800px;
-      border-radius: 10px;
-      box-shadow: 0 0 16px rgba(255, 215, 0, 0.9);
-      user-select: none;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="header-logo">
-      <a href="index.html" style="color: gold; font-weight: bold; font-size: 28px; text-decoration: none;">
-        LuxAuto
-      </a>
-    </div>
-    <nav class="header-nav">
-      <a href="index.html">Главная</a>
-      <a href="catalog.html" class="active">Каталог</a>
-      <a href="contacts.html">Контакты</a>
-    </nav>
+    <h1>Jaguar F-Type 2024 – Обзор 360°</h1>
   </header>
 
-  <!-- 360° обзор -->
   <section class="hero">
-    <div id="car360Viewer">
-      <img id="car360" src="https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_00" alt="Jaguar 360 View">
-    </div>
+    <div id="jaguar360" style="width: 100%; max-width: 800px; height: 500px; margin: auto;"></div>
   </section>
 
-  <div class="car-details">
-    <h1>Jaguar F-Type</h1>
-    <p>JAGUAR F-TYPE<br>
-    Самый красивый британский спортивный автомобиль с богатой историей в автоспорте.</p>
+  <footer>
+    &copy; 2025 LuxAuto. Все права защищены.
+  </footer>
 
-    <div class="car-photos">
-      <figure>
-        <img src="https://media.cdn-jaguarlandrover.com/api/v2/images/101527/w/1600/h/900.jpg" alt="" />
-        <figcaption></figcaption>
-      </figure>
-      <figure>
-        <img src="https://media.cdn-jaguarlandrover.com/api/v2/images/101528/w/1600/h/900.jpg" alt="" />
-        <figcaption></figcaption>
-      </figure>
-      <figure>
-        <img src="https://media.cdn-jaguarlandrover.com/api/v2/images/89730/w/1600/h/900.jpg" alt="" />
-        <figcaption>
-          В основе Jaguar F-TYPE лежат технологии и системы, повышающие динамические характеристики и улучшающие управляемость. 
-          Система полного привода вселяет уверенность на дороге. Активный дифференциал с электронным управлением и динамическим 
-          распределением крутящего момента на колесо позволяет автомобилю максимально эффективно проходить самые сложные повороты. 
-          Настраиваемая система адаптивного управления подвеской Adaptive Dynamics помогает создавать оптимальные впечатления от вождения.
-        </figcaption>
-      </figure>
-    </div>
-    <a href="catalog.html" class="back">← Назад в каталог</a>
-  </div>
-
-  <!-- Скрипт 360° обзора -->
   <script>
-    const frameCount = 38;
-    const imgElement = document.getElementById("car360");
-    let currentFrame = 0;
+    const frames = [
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_00",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_01",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_02",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_03",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_04",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_05",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_06",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_07",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_08",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_09",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_10",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_11",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_12",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_13",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_14",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_15",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_16",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_17",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_18",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_19",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_20",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_21",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_22",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_23",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_24",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_25",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_26",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_27",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_28",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_29",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_30",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_31",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_32",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_33",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_34",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_35",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_36",
+      "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_37"
+    ];
 
-    function updateFrame(index) {
-      const frameNumber = index.toString().padStart(2, '0');
-      imgElement.src = `https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_${frameNumber}`;
-    }
-
-    let isDragging = false;
-    let startX = 0;
-
-    document.getElementById("car360Viewer").addEventListener("mousedown", e => {
-      isDragging = true;
-      startX = e.clientX;
-    });
-
-    document.addEventListener("mouseup", () => {
-      isDragging = false;
-    });
-
-    document.addEventListener("mousemove", e => {
-      if (!isDragging) return;
-      const deltaX = e.clientX - startX;
-      if (Math.abs(deltaX) > 10) {
-        if (deltaX > 0) {
-          currentFrame = (currentFrame + 1) % frameCount;
-        } else {
-          currentFrame = (currentFrame - 1 + frameCount) % frameCount;
-        }
-        updateFrame(currentFrame);
-        startX = e.clientX;
-      }
-    });
-
-    // Поддержка касаний
-    document.getElementById("car360Viewer").addEventListener("touchstart", e => {
-      isDragging = true;
-      startX = e.touches[0].clientX;
-    });
-
-    document.getElementById("car360Viewer").addEventListener("touchend", () => {
-      isDragging = false;
-    });
-
-    document.getElementById("car360Viewer").addEventListener("touchmove", e => {
-      if (!isDragging) return;
-      const deltaX = e.touches[0].clientX - startX;
-      if (Math.abs(deltaX) > 10) {
-        if (deltaX > 0) {
-          currentFrame = (currentFrame + 1) % frameCount;
-        } else {
-          currentFrame = (currentFrame - 1 + frameCount) % frameCount;
-        }
-        updateFrame(currentFrame);
-        startX = e.touches[0].clientX;
-      }
+    $("#jaguar360").spritespin({
+      source: frames,
+      width: 800,
+      height: 500,
+      frameTime: 60,
+      animate: false,
+      sense: -1,
+      responsive: true,
+      plugins: [
+        'drag',
+        '360'
+      ]
     });
   </script>
+
 </body>
 </html>
