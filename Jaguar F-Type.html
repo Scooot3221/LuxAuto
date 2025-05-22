@@ -3,21 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>Jaguar F-Type</title>
-
-  <!-- Подключение SpriteSpin и jQuery -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spritespin@4.0.11/release/spritespin.css" />
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/spritespin@4.0.11/release/spritespin.js"></script>
-
+  <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
   <style>
-    body {
-      background-color: #000;
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
     header {
       display: flex;
       justify-content: space-between;
@@ -30,11 +17,8 @@
       z-index: 1000;
     }
 
-    .header-logo a {
-      color: gold;
-      font-weight: bold;
-      font-size: 28px;
-      text-decoration: none;
+    .header-logo img {
+      height: 50px;
     }
 
     .header-nav a {
@@ -49,6 +33,14 @@
     .header-nav a:hover,
     .header-nav a.active {
       color: #ffd700;
+    }
+
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     h1 {
@@ -72,10 +64,33 @@
       padding: 40px 20px;
     }
 
-    .viewer-container {
-      margin: 40px auto;
+    .car-photos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .car-photos figure {
+      width: 70vw;
+      max-width: 700px;
+      margin: 0;
+      text-align: center;
+      color: white;
+    }
+
+    .car-photos img {
       width: 100%;
-      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 0 16px rgba(255, 215, 0, 0.9);
+    }
+
+    .car-photos figcaption {
+      margin-top: 8px;
+      font-size: 14px;
+      font-style: italic;
+      color: white;
     }
 
     a.back {
@@ -90,12 +105,26 @@
     a.back:hover {
       text-decoration: underline;
     }
+
+    .hero {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    #spinner {
+      margin: auto;
+      max-width: 90vw;
+    }
   </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/spritespin@4.0.11/release/spritespin.min.js"></script>
 </head>
 <body>
   <header>
     <div class="header-logo">
-      <a href="index.html">LuxAuto</a>
+      <a href="index.html" style="color: gold; font-weight: bold; font-size: 28px; text-decoration: none;">
+        LuxAuto
+      </a>
     </div>
     <nav class="header-nav">
       <a href="index.html">Главная</a>
@@ -104,18 +133,36 @@
     </nav>
   </header>
 
-  <div class="viewer-container">
-    <div id="spinner" style="width: 800px; height: 450px;"></div>
-  </div>
+  <!-- Обзор 360° -->
+  <section class="hero">
+    <div id="spinner" style="width: 100%; height: auto;"></div>
+  </section>
 
   <div class="car-details">
     <h1>Jaguar F-Type</h1>
-    <p>JAGUAR F-TYPE — Самый красивый британский спортивный автомобиль с богатой историей в автоспорте.</p>
+    <p>JAGUAR F-TYPE
+    Самый красивый британский спортивный автомобиль с богатой историей в автоспорте.</p>
+
+    <div class="car-photos">
+      <figure>
+        <img src="https://media.cdn-jaguarlandrover.com/api/v2/images/101527/w/1600/h/900.jpg" alt="" />
+        <figcaption></figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://media.cdn-jaguarlandrover.com/api/v2/images/101528/w/1600/h/900.jpg" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+      <figure>
+        <img src="https://media.cdn-jaguarlandrover.com/api/v2/images/89730/w/1600/h/900.jpg" alt="" />
+        <figcaption>В основе Jaguar F-TYPE лежат технологии и системы, повышающие динамические характеристики и улучшающие управляемость. Система полного привода вселяет уверенность на дороге. Активный дифференциал с электронным управлением и динамическим распределением крутящего момента на колесо позволяет автомобилю максимально эффективно проходить самые сложные повороты. Настраиваемая система адаптивного управления подвеской Adaptive Dynamics помогает создавать оптимальные впечатления от вождения.</figcaption>
+      </figure>
+    </div>
     <a href="catalog.html" class="back">← Назад в каталог</a>
   </div>
 
-  <!-- Инициализация SpriteSpin -->
-   <script>
+  <script>
     $(function(){
       $("#spinner").spritespin({
         source: [
@@ -142,8 +189,8 @@
           "https://i.ibb.co/732mJFk/X15224-GL-303101393-011-18.webp",
           "https://i.ibb.co/HTzcM2b3/X15224-GL-303101393-011-19.webp",
           "https://i.ibb.co/fzKgZywm/X15224-GL-303101393-011-20.webp",
-         "https://i.ibb.co/pBrCLmbs/X15224-GL-303101393-011-21.jpg",
-         "https://i.ibb.co/Kcrf21J1/X15224-GL-303101393-011-22.webp",
+          "https://i.ibb.co/pBrCLmbs/X15224-GL-303101393-011-21.jpg",
+          "https://i.ibb.co/Kcrf21J1/X15224-GL-303101393-011-22.webp",
           "https://i.ibb.co/2YSxLrNz/X15224-GL-303101393-011-23.webp",
           "https://i.ibb.co/rKy1mknp/X15224-GL-303101393-011-24.jpg",
           "https://i.ibb.co/HfrgbnpQ/X15224-GL-303101393-011-25.jpg",
@@ -158,11 +205,10 @@
           "https://i.ibb.co/3mJJZBYk/X15224-GL-303101393-011-33.jpg",
           "https://i.ibb.co/gFVqs35Q/X15224-GL-303101393-011-34.jpg",
           "https://i.ibb.co/Ps3Jywb2/X15224-GL-303101393-011-35.jpg",
-          "https://i.ibb.co/QFpnRQk6/X15224-GL-303101393-011-36.jpg",
-      
+          "https://i.ibb.co/QFpnRQk6/X15224-GL-303101393-011-36.jpg"
         ],
         width: 800,
-        height: 450,
+        height: 500,
         frameTime: 60,
         sense: -1,
         responsive: true,
@@ -170,6 +216,5 @@
       });
     });
   </script>
-
 </body>
 </html>
