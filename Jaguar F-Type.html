@@ -109,44 +109,73 @@
     }
 
     /* Анимация авто */
-    .hero {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
+    <!-- Обзор 360° -->
+<section class="hero">
+  <div class="car-image" id="car360Viewer" style="text-align:center;">
+    <img id="car360" src="https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_00" alt="Jaguar 360 View" style="width: 90%; max-width: 800px; border-radius: 10px; box-shadow: 0 0 16px rgba(255, 215, 0, 0.9);">
+  </div>
+</section>
 
-.car-image {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
+<script>
+  const frameCount = 38;
+  const imgElement = document.getElementById("car360");
+  let currentFrame = 0;
 
-.base-car, .headlights {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 1.8s ease-in-out;
-  pointer-events: none;
-}
+  function updateFrame(index) {
+    const frameNumber = index.toString().padStart(2, '0');
+    imgElement.src = `https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_${frameNumber}`;
+  }
 
-.base-car {
-  z-index: 1;
-  opacity: 1;
-}
+  let isDragging = false;
+  let startX = 0;
 
-.headlights {
-  z-index: 2;
-  opacity: 0;
-  mix-blend-mode: screen;
-}
+  document.getElementById("car360Viewer").addEventListener("mousedown", e => {
+    isDragging = true;
+    startX = e.clientX;
+  });
 
-.headlights.on {
-  opacity: 1;
-}
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+  });
+
+  document.addEventListener("mousemove", e => {
+    if (!isDragging) return;
+    const deltaX = e.clientX - startX;
+    if (Math.abs(deltaX) > 10) {
+      if (deltaX > 0) {
+        currentFrame = (currentFrame + 1) % frameCount;
+      } else {
+        currentFrame = (currentFrame - 1 + frameCount) % frameCount;
+      }
+      updateFrame(currentFrame);
+      startX = e.clientX;
+    }
+  });
+
+  // Поддержка касания
+  document.getElementById("car360Viewer").addEventListener("touchstart", e => {
+    isDragging = true;
+    startX = e.touches[0].clientX;
+  });
+
+  document.getElementById("car360Viewer").addEventListener("touchend", () => {
+    isDragging = false;
+  });
+
+  document.getElementById("car360Viewer").addEventListener("touchmove", e => {
+    if (!isDragging) return;
+    const deltaX = e.touches[0].clientX - startX;
+    if (Math.abs(deltaX) > 10) {
+      if (deltaX > 0) {
+        currentFrame = (currentFrame + 1) % frameCount;
+      } else {
+        currentFrame = (currentFrame - 1 + frameCount) % frameCount;
+      }
+      updateFrame(currentFrame);
+      startX = e.touches[0].clientX;
+    }
+  });
+</script>
 
   </style>
 </head>
