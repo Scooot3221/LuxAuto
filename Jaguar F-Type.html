@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <title>Jaguar F-Type</title>
+  <head>
+  ...
+  <!-- SpriteSpin -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spritespin@4.0.11/release/spritespin.css" />
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/spritespin@4.0.11/release/spritespin.js"></script>
+  ...
+</head>
 
   <!-- Подключение SpriteSpin -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spritespin@4.0.11/release/spritespin.min.css">
@@ -122,6 +130,7 @@
   </style>
 </head>
 <body>
+  <div id="spinner" style="width: 800px; height: 450px; margin: 40px auto;"></div>
 
   <header>
     <div class="header-logo">
@@ -182,6 +191,59 @@
       plugins: ['drag', '360']
     });
   </script>
+ <script>
+    $(function(){
+      $("#spinner").spritespin({
+        source: [
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_00",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_01",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_02",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_03",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_04",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_05",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_06",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_07",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_08",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_09",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_10",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_11",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_12",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_13",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_14",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_15",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_16",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_17",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_18",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_19",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_20",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_21",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_22",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_23",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_24",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_25",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_26",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_27",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_28",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_29",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_30",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_31",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_32",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_33",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_34",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_35",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_36",
+          "https://jlr.scene7.com/is/image/jlr/X15224GL_303101393_011_37"
+        ],
+        width: 800,
+        height: 450,
+        frameTime: 60,
+        sense: -1,
+        responsive: true,
+        animate: false
+      });
+    });
+  </script>
+
 
 </body>
 </html>
