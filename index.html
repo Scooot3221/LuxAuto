@@ -228,13 +228,20 @@
       <button class="close-btn" onclick="toggleFeedback()">✖</button>
       <h2>Запишитесь на тест-драйв</h2>
       <form action="https://formspree.io/f/mwpozkkq" method="POST">
-        <input type="text" name="name" placeholder="Ваше имя" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <textarea name="message" placeholder="Сообщение"></textarea>
-        <button type="submit" class="submit-btn">Отправить</button>
-      </form>
-    </div>
-  </div>
+  <input type="text" name="name" placeholder="Ваше имя" required />
+  <input type="email" name="email" placeholder="Email" required />
+  <textarea name="message" placeholder="Сообщение"></textarea>
+
+  <p style="font-size: 12px; color: #888; margin: 10px 0;">
+    Отправляя заявку, вы принимаете условия 
+    <a href="privacy.html" target="_blank" style="color: #888; text-decoration: underline;">
+      Политики конфиденциальности
+    </a>.
+  </p>
+
+  <button type="submit" class="submit-btn">Отправить</button>
+</form>
+
 
   <!-- Футер -->
   <footer>
